@@ -1,31 +1,3 @@
-// // API Calling
-// export const searchRepositories = async (query = '', page = 1, perPage = 15) => {
-//     console.log(`API Calling: Query="${query}", Page=${page}`);
-  
-//     try {
-//       const apiUrl = query.trim()
-//         ? `https://api.github.com/search/repositories?q=${query}+in:name&sort=stars&order=desc&page=${page}&per_page=${perPage}`
-//         : `https://api.github.com/search/repositories?q={query}`;
-      
-//       const response = await fetch(apiUrl);
-//       const data = await response.json();
-      
-//       console.log('API Response:', data);
-  
-//       if (data.items) {
-//         console.log('Data Items:', data.items.length);
-//         return data.items;
-//       } else {
-//         console.error('API Error:', data);
-//         return [];
-//       }
-//     } catch (error) {
-//       console.error('Fetch Error:', error);
-//       return [];
-//     }
-//   };
-  
-
 import NetInfo from '@react-native-community/netinfo';
 
 export const searchRepositories = async (query = '', page = 1, perPage = 15) => {
